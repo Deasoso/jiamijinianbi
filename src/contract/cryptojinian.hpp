@@ -6,20 +6,19 @@
 #include <eosiolib/eosio.hpp>
 #include <eosiolib/asset.hpp>
 #include <eosiolib/contract.hpp>
+#include <eosiolib/currency.hpp>
 //#include "../eosio.token/eosio.token.hpp"
 #include <cmath>
 #include <string>
 #include <vector>
 
-typedef double real_type;
+#define EOS S(4, EOS)
+#define TOKEN_CONTRACT N(eosio.token)
 
-using std::string;
-using eosio::symbol_name;
-using eosio::asset;
-using eosio::symbol_type;
-using eosio::contract;
-using eosio::permission_level;
-using eosio::action;
+using namespace eosio;
+using namespace std;
+
+typedef double real_type;
 
 class cryptojinian : public contract{
     public:
@@ -56,7 +55,7 @@ class cryptojinian : public contract{
             std::vector<uint64_t> coins; // coins, for id
 
             uint64_t primary_key() const { return name; }
-            EOSLIB_SERIALIZE(player, (account)(name)(seed)(coins))
+            EOSLIB_SERIALIZE(player, (name)(seed)(coins))
         };
         typedef eosio::multi_index<N(player), player> player_index;
         player_index players;
@@ -72,7 +71,7 @@ class cryptojinian : public contract{
             EOSLIB_SERIALIZE(coin, (id)(owner)(type)(value)(number))
         };
         typedef eosio::multi_index<N(coin), coin> coin_index;
-        round_index coins; 
+        coin_index coins; 
 
         struct global {
             uint64_t id = 0;
@@ -96,7 +95,7 @@ class cryptojinian : public contract{
 extern "C" {
     [[noreturn]] void apply(uint64_t receiver, uint64_t code, uint64_t action) 
     {
-        escrow p(receiver);
+        cryptojinian p(receiver);
         p.apply(code, action);
         eosio_exit(0);
     }

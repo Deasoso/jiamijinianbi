@@ -4,7 +4,7 @@
 #include <cstdio>
 
  // @abi action
-void cryptojinian::setcoin(const account_name owner, const uint64_t type, const uint64_t value, const uint64_t number);
+void cryptojinian::setcoin(const account_name owner, const uint64_t type, const uint64_t value, const uint64_t number){
     //require_auth( msgsender );
     // auto player = players.find(owner);
     // if(player == players.end()){
@@ -21,7 +21,7 @@ void cryptojinian::setcoin(const account_name owner, const uint64_t type, const 
     // }
 
     coins.emplace(_self, [&](auto &coin) {
-        coin.id = offers.available_primary_key();
+        coin.id = coins.available_primary_key();
         coin.owner = owner;
         coin.type = type;
         coin.value = value;
@@ -45,23 +45,23 @@ void cryptojinian::onTransfer(account_name from, account_name to, extended_asset
     eosio_assert(quantity.is_valid(), "invalid token transfer");
     eosio_assert(quantity.amount > 0, "must transfer a positive amount");
     
-    asset a = asset(quantity.symbol, quantity.amount / 2);
-    asset b = asset(quantity.symbol, quantity.amount - quantity.amount / 2);
+    // asset a = asset(quantity.symbol, quantity.amount / 2);
+    // asset b = asset(quantity.symbol, quantity.amount - quantity.amount / 2);
 
-    if (a.amount > 0) {
-        action(
-            permission_level{_self, N(active)},
-            quantity.contract, N(transfer),
-            make_tuple(_self, N(minakokojima), a,
-            std::string(""))
-        ).send();
-    }
-    if (b.amount > 0) {
-        action(
-            permission_level{_self, N(active)},
-            quantity.contract, N(transfer),
-            make_tuple(_self, N(rukamoemoe51), b,
-            std::string(""))
-        ).send();
-    }
+    // if (a.amount > 0) {
+    //     action(
+    //         permission_level{_self, N(active)},
+    //         quantity.contract, N(transfer),
+    //         make_tuple(_self, N(minakokojima), a,
+    //         std::string(""))
+    //     ).send();
+    // }
+    // if (b.amount > 0) {
+    //     action(
+    //         permission_level{_self, N(active)},
+    //         quantity.contract, N(transfer),
+    //         make_tuple(_self, N(rukamoemoe51), b,
+    //         std::string(""))
+    //     ).send();
+    // }
 }

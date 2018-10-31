@@ -16,9 +16,13 @@
   "dependencies": {
     "buefy": "^0.6.6",
     "bulma": "^0.7.1",
+    "eosjs": "^16.0.9",
     "postcss": "^6.0.23",
+    "scatterjs-core": "^2.3.8",
+    "scatterjs-plugin-eosjs2": "^1.1.6",
     "vue": "^2.5.2",
     "vue-easy-slider": "^3.2.0",
+    "vue-i18n": "^8.2.1",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
