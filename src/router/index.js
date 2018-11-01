@@ -44,7 +44,19 @@ import Mining from '@/components/Mining';
 createroute(Mining, "Mining");
 
 import Mine from '@/components/Mine';
-createroute(Mine, "Mine");
+createrouteaddid(Mine, "Mine", "Mine");
+
+import SelectCoin from '@/components/Mine/SelectCoin';
+createrouteaddid(SelectCoin, "SelectCoin",  "SelectCoin/:type");
+
+import MyCoin from '@/components/Mine/MyCoin';
+createrouteaddid(MyCoin, "MyCoin",  "MyCoin/:type/:cointype/:value");
+
+import SellCoin from '@/components/Mine/SellCoin';
+createrouteaddid(SellCoin, "SellCoin",  "SellCoin/:coinnumber");
+
+import ExchangeCoin from '@/components/Mine/ExchangeCoin';
+createrouteaddid(ExchangeCoin, "ExchangeCoin",  "ExchangeCoin/:type");
 
 import Transaction from '@/components/Transaction';
 createroute(Transaction, "Transaction");
@@ -53,7 +65,7 @@ import RankReward from '@/components/RankReward';
 createroute(RankReward, "RankReward");
 
 import CombineReward from '@/components/CombineReward';
-createrouteaddid(CombineReward, "CombineReward", "CombineReward");
+createrouteaddid(CombineReward, "CombineReward", "CombineReward/:page");
 
 import GloryReward from '@/components/GloryReward';
 createroute(GloryReward, "GloryReward");

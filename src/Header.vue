@@ -6,7 +6,7 @@
           <div v-for="(page, index) in pages" :key="index">
             <router-link
               class="navbar-item"
-                            :to="{ name: page }">
+                            :to="{ name: page , params:{page: 1}}">
                   {{routes[index]}}
             </router-link>
           </div>
