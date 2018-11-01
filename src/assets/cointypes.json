@@ -3,6 +3,7 @@
         "types":[
             {
                 "name":"1元比特币",
+                "cointype":"BIT",
                 "type":"1",
                 "value":"1",
                 "coinurl": "../../../static/pic/白皮书图.png"
@@ -10,6 +11,7 @@
             ,
             {
                 "name":"1元比特币硬币",
+                "cointype":"BIT",
                 "type":"2",
                 "value":"1",
                 "coinurl": "../../static/pic/白皮书图.png"
@@ -17,6 +19,7 @@
             ,
             {
                 "name":"2元比特币",
+                "cointype":"BIT",
                 "type":"1",
                 "value":"2",
                 "coinurl": "../../static/pic/白皮书图.png"
@@ -24,6 +27,7 @@
             ,
             {
                 "name":"5元比特币",
+                "cointype":"BIT",
                 "type":"1",
                 "value":"5",
                 "coinurl": "../../static/pic/白皮书图.png"
@@ -31,9 +35,22 @@
             ,
             {
                 "name":"10元比特币",
+                "cointype":"BIT",
                 "type":"1",
                 "value":"10",
                 "coinurl": "../../static/pic/白皮书图.png"
+            }
+        ]
+    }
+    ,
+    "ETH":{
+        "types":[
+            {
+                "name":"1元以太币",
+                "cointype":"ETH",
+                "type":"1",
+                "value":"1",
+                "coinurl": "../../../static/pic/白皮书图.png"
             }
         ]
     }

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img style="margin-left:10%;" alt="" width="80%" srcset="../../static/pic/市值排行图.png"/>
+    <img style="margin-left:10%;margin-top:-40%;" alt="" width="80%" srcset="../../static/pic/43市值排行.png"/>
     <div>
 规则说明：</br>
 1.北京时间每日晚上11:59根据市值大小队对纪念币进行自动排名；</br>

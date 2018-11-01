@@ -61,6 +61,18 @@ createrouteaddid(ExchangeCoin, "ExchangeCoin",  "ExchangeCoin/:type");
 import Transaction from '@/components/Transaction';
 createroute(Transaction, "Transaction");
 
+import SelectType from '@/components/Transaction/SelectType';
+createrouteaddid(SelectType, "SelectType",  "SelectType/:type");
+
+import TransactionList from '@/components/Transaction/TransactionList';
+createrouteaddid(TransactionList, "TransactionList",  "TransactionList/:type/:cointype/:value");
+
+import BuyCoin from '@/components/Transaction/BuyCoin';
+createrouteaddid(BuyCoin, "BuyCoin",  "BuyCoin/:sellid");
+
+import AllType from '@/components/Transaction/AllType';
+createroute(AllType, "AllType");
+
 import RankReward from '@/components/RankReward';
 createroute(RankReward, "RankReward");
 

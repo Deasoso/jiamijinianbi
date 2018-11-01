@@ -8,9 +8,9 @@
         <a class="button" style="margin-left:5px">取消</a>
       </div>
     </nav>
-    <a class="button is-rounded" style="margin-left:30%;width:40%;">查看可搜索纪念币</a>
+    <a class="button is-rounded" style="margin-left:30%;width:40%;" @click="toalltype()">查看可搜索纪念币</a>
     <div class="columns is-multiline is-mobile" style="padding-left:20%;padding-right:20%;">
-      <a @click="enter" v-for="(coin,key) in coins" key="index" class="column is-one-quarter">
+      <a @click="toselect(coin.cointype)" v-for="(coin,key) in coins" key="index" class="column is-one-quarter">
         <span style="padding:5px;">
           <div><img alt="" width="100%" :srcset="coin.logourl"/></div>
           <div style="text-align:center">{{coin.name}}</div>
@@ -30,8 +30,13 @@ export default {
     }
   },
   methods: {
-			enter: function (e) {
-        console.log(e.toElement.innerText);
+			toselect: function (type) {
+        console.log(type);
+        this.$router.push({ path: `/selecttype/${type}`});
+      },
+      toalltype: function (e) {
+        // console.log(e.toElement.innerText);
+        this.$router.push({ path: `/alltype`});
       }
   }
 }
