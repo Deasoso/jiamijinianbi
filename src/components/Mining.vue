@@ -40,7 +40,7 @@ export default {
 .section2 {
   background-size: 100%;
   background-repeat: no-repeat;
-  background-color: #00e0c6;
+  background-color: #fff;
   padding-top: 100px;
   padding-bottom: 50px;
   @media (max-width: 800px) {

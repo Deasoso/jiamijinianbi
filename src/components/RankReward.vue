@@ -60,7 +60,7 @@ export default {
   .selltextleft{
       position: absolute;/*绝对定位*/
       width: 100%;
-      left: 35%;/*离左边0像素*/
+      left: 38%;/*离左边0像素*/
       font-size: 18px;
   }
   .selltextright{

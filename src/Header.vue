@@ -3,13 +3,43 @@
     <nav class="navbar">
       <section class="section1">
         <div class="navbar-brand">
-          <div v-for="(page, index) in pages" :key="index">
-            <router-link
-              class="navbar-item"
-                            :to="{ name: page , params:{page: 1}}">
-                  {{routes[index]}}
-            </router-link>
+          <!-- <router-link
+            class="navbar-item"
+                          :to="{ name: pages[0]}">首页
+          </router-link>
+          <router-link
+            class="navbar-item"
+                          :to="{ name: pages[1]}">怎么玩
+          </router-link>
+          <div class="select" style="margin-top:5px">
+            <select>
+              <option selected>纪念币介绍</option>
+              <option>比特币</option>
+            </select>
           </div>
+          <router-link
+            class="navbar-item"
+                          :to="{ name: pages[3]}">挖矿
+          </router-link>
+          <router-link
+            class="navbar-item"
+                          :to="{ name: pages[4]}">我的纪念币
+          </router-link>
+          <router-link
+            class="navbar-item"
+                          :to="{ name: pages[5]}">纪念币交易
+          </router-link>
+          <div class="select" style="margin-top:5px">
+            <select>
+              <option selected>奖励</option>
+              <option>
+                <router-link
+                  class="navbar-item"
+                                :to="{ name: pages[6]}">
+                </router-link>市值排行奖励
+              </option>
+            </select>
+          </div> -->
           <!-- <router-link
         class="navbar-item"
                       :to="{ name: 'Transaction', params:{address: me.address} }">
@@ -31,8 +61,8 @@ export default {
   name: 'Header',
   data () {
     return {
-      pages: ["HomePage", "Prepare", "Description", "Introduction", "Mining", "Mine", "Transaction", "RankReward", "CombineReward", "GloryReward", "Proof", "Refer", "Airdrop"],
-      routes: ["首页","玩前准备","玩法说明","纪念币介绍","挖矿","我的纪念币","纪念币交易","市值排行奖励","组合奖励","衔级奖励","通证","推荐计划","领取空投"]
+      pages: ["HomePage", "Prepare", "Introduction", "Mining", "Mine", "Transaction", "RankReward", "CombineReward", "GloryReward", "Proof", "Refer", "Airdrop"],
+      routes: ["首页","怎么玩","纪念币介绍","挖矿","我的纪念币","纪念币交易","市值排行奖励","组合奖励","衔级奖励","通证","推荐计划","领取空投"]
     }
   }
 }
@@ -88,11 +118,13 @@ a.navbar-item:hover {
 .section1 {
   background-image: url("../static/pic/主页图.png");
   background-size: 100%;
+  width: 100%;
   background-repeat: no-repeat;
   background-color: #000;
-  @media (max-width: 800px) {
+  background-size: cover;
+  /* @media (max-width: 800px) {
     background-size: cover;
     padding-left: 1000px;
-  }
+  } */
 }
 </style>

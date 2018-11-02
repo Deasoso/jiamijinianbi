@@ -80,7 +80,7 @@ import CombineReward from '@/components/CombineReward';
 createrouteaddid(CombineReward, "CombineReward", "CombineReward/:page");
 
 import GloryReward from '@/components/GloryReward';
-createroute(GloryReward, "GloryReward");
+createrouteaddid(GloryReward, "GloryReward", "GloryReward/:page");
 
 import Proof from '@/components/Proof';
 createroute(Proof, "Proof");
